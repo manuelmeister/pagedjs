@@ -52,27 +52,27 @@ export default `
 
 .pagedjs_sheet {
 	box-sizing: border-box;
-	width: var(--pagedjs-width);
-	height: var(--pagedjs-height);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
 	overflow: hidden;
 	position: relative;
 	display: grid;
-	grid-template-columns: [bleed-left] var(--pagedjs-bleed-left) [sheet-center] calc(var(--pagedjs-width) - var(--pagedjs-bleed-left) - var(--pagedjs-bleed-right)) [bleed-right] var(--pagedjs-bleed-right);
-	grid-template-rows: [bleed-top] var(--pagedjs-bleed-top) [sheet-middle] calc(var(--pagedjs-height) - var(--pagedjs-bleed-top) - var(--pagedjs-bleed-bottom)) [bleed-bottom] var(--pagedjs-bleed-bottom);
+	grid-template-columns: [bleed-left] var(--pagedjs-bleed-left) [sheet-center] calc(var(--pagedjs-pagebox-width) - var(--pagedjs-bleed-left) - var(--pagedjs-bleed-right)) [bleed-right] var(--pagedjs-bleed-right);
+	grid-template-rows: [bleed-top] var(--pagedjs-bleed-top) [sheet-middle] calc(var(--pagedjs-pagebox-height) - var(--pagedjs-bleed-top) - var(--pagedjs-bleed-bottom)) [bleed-bottom] var(--pagedjs-bleed-bottom);
 }
 
 .pagedjs_right_page .pagedjs_sheet {
-	width: var(--pagedjs-width-right);
-	height: var(--pagedjs-height-right);
-	grid-template-columns: [bleed-left] var(--pagedjs-bleed-right-left) [sheet-center] calc(var(--pagedjs-width) - var(--pagedjs-bleed-right-left) - var(--pagedjs-bleed-right-right)) [bleed-right] var(--pagedjs-bleed-right-right);
-	grid-template-rows: [bleed-top] var(--pagedjs-bleed-right-top) [sheet-middle] calc(var(--pagedjs-height) - var(--pagedjs-bleed-right-top) - var(--pagedjs-bleed-right-bottom)) [bleed-bottom] var(--pagedjs-bleed-right-bottom);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
+	grid-template-columns: [bleed-left] var(--pagedjs-bleed-right-left) [sheet-center] calc(var(--pagedjs-pagebox-width) - var(--pagedjs-bleed-right-left) - var(--pagedjs-bleed-right-right)) [bleed-right] var(--pagedjs-bleed-right-right);
+	grid-template-rows: [bleed-top] var(--pagedjs-bleed-right-top) [sheet-middle] calc(var(--pagedjs-pagebox-height) - var(--pagedjs-bleed-right-top) - var(--pagedjs-bleed-right-bottom)) [bleed-bottom] var(--pagedjs-bleed-right-bottom);
 }
 
 .pagedjs_left_page .pagedjs_sheet {
-	width: var(--pagedjs-width-left);
-	height: var(--pagedjs-height-left);
-	grid-template-columns: [bleed-left] var(--pagedjs-bleed-left-left) [sheet-center] calc(var(--pagedjs-width) - var(--pagedjs-bleed-left-left) - var(--pagedjs-bleed-left-right)) [bleed-right] var(--pagedjs-bleed-left-right);
-	grid-template-rows: [bleed-top] var(--pagedjs-bleed-left-top) [sheet-middle] calc(var(--pagedjs-height) - var(--pagedjs-bleed-left-top) - var(--pagedjs-bleed-left-bottom)) [bleed-bottom] var(--pagedjs-bleed-left-bottom);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
+	grid-template-columns: [bleed-left] var(--pagedjs-bleed-left-left) [sheet-center] calc(var(--pagedjs-pagebox-width) - var(--pagedjs-bleed-left-left) - var(--pagedjs-bleed-left-right)) [bleed-right] var(--pagedjs-bleed-left-right);
+	grid-template-rows: [bleed-top] var(--pagedjs-bleed-left-top) [sheet-middle] calc(var(--pagedjs-pagebox-height) - var(--pagedjs-bleed-left-top) - var(--pagedjs-bleed-left-bottom)) [bleed-bottom] var(--pagedjs-bleed-left-bottom);
 }
 
 .pagedjs_bleed {
@@ -458,18 +458,18 @@ export default `
 
 .pagedjs_page {
 	counter-increment: page var(--pagedjs-page-counter-increment);
-	width: var(--pagedjs-width);
-	height: var(--pagedjs-height);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
 }
 
 .pagedjs_page.pagedjs_right_page {
-	width: var(--pagedjs-width-right);
-	height: var(--pagedjs-height-right);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
 }
 
 .pagedjs_page.pagedjs_left_page {
-	width: var(--pagedjs-width-left);
-	height: var(--pagedjs-height-left);
+	width: var(--pagedjs-pagebox-width);
+	height: var(--pagedjs-pagebox-height);
 }
 
 .pagedjs_pages {

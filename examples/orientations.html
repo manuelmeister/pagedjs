@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Orientations</title>
+	<style>
+		body {
+			background: wheat;
+		}
+		@page {
+			background: white;
+			margin: 1cm;
+			size: A4 portrait;
+			border: 1px solid;
+			@top-right {
+				content: 'Top right'
+			}
+			@bottom-right {
+				content: 'Bottom right'
+			}
+			@bottom-left {
+				content: counter(page);
+			}
+		}
+		@page:first {
+			margin: 4cm;
+			size: A4 portrait;
+		}
+		@page:nth(2n) {
+			margin: 2cm;
+			size: A4 landscape;
+		}
+		section {
+			page-break-after: always;
+		}
+		@media screen {
+			.pagedjs_page {
+				margin: 20px auto;
+			}
+		}
+	</style>
+</head>
+<body>
+<section><div style="border: 3px solid dodgerblue">First page</div></section>
+<section><div style="border: 3px solid #d62728">Second page</div></section>
+<section><div style="border: 3px solid #fc0">Third page</div></section>
+<script src="../dist/paged.polyfill.js"></script>
+</body>
+</html>
